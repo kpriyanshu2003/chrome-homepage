@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+body {
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+body > div:nth-child(1) {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+div:nth-child(1) > svg {
+  height: 50px;
+}
+
+body > div:nth-child(2) {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+div > input {
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  text-indent: 20px;
+  width: 100%;
+}
+
+div > input::placeholder {
+  color: white;
+}
+div > svg {
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}

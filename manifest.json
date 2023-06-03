@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Home Page",
+  "version": "1.0",
+  "description": "A custom homepage created my me, using basic html, css and javascript",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["tabs"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
