@@ -1,25 +1,27 @@
-const src = document.querySelector("input");
+const searchInput = document.querySelector("input");
+const searchForm = document.getElementById("searchForm");
 
-src.addEventListener("keyup", () => {
+searchInput.addEventListener("keyup", function () {
   document.getElementById("closeIcon").style.display = parseInt(
-    src.value.trim().length
+    searchInput.value.trim().length
   )
     ? "block"
     : "none";
 });
 
-function search(event) {
+searchForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  if (src.value) {
+  if (searchInput.value) {
     var searchUrl =
-      "https://www.google.com/search?q=" + encodeURIComponent(src.value);
-    window.location.assign(searchUrl);
+      "https://www.google.com/search?q=" +
+      encodeURIComponent(searchInput.value);
+    window.location.href = searchUrl;
   }
   closeSearch();
-}
+});
 
 function closeSearch() {
-  src.value = "";
+  searchInput.value = "";
 }
 
 function dnt() {
