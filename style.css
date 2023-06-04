@@ -19,41 +19,75 @@ body {
   place-items: center;
 }
 
-body > div:nth-child(1) {
+.uno {
   position: absolute;
   top: 50px;
   left: 50px;
   display: flex;
+  font-size: large;
   align-items: center;
 }
 
-div:nth-child(1) > svg {
+.uno > svg {
   height: 50px;
+  margin-right: 15px;
 }
 
-body > div:nth-child(2) {
+.dos {
   width: 45%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.8);
   border: 1px solid white;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
+  font-size: large;
 }
-div > input {
+
+.dos input {
   outline: none;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px 10px;
   background: transparent;
   border: none;
   text-indent: 20px;
   width: 100%;
+  font-size: large;
 }
 
-div > input::placeholder {
-  color: white;
+.dos input::placeholder {
+  color: rgb(145, 145, 145);
 }
-div > svg {
+
+button > svg {
   height: 20px;
+  margin-top: 4px;
   margin-right: 15px;
   cursor: pointer;
+}
+
+#closeIcon {
+  position: absolute;
+  cursor: pointer;
+  height: 20px;
+  right: 40px;
+  display: none;
+}
+
+.dos form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dos button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.tres {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  text-align: right;
+  font-size: large;
 }

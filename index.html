@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.png" type="image/png" />
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Homepage</title>
   </head>
   <body>
-    <div>
+    <div class="uno">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -25,26 +26,49 @@
         />
       </svg>
       <div>
-        <span>Username</span>
-        <div id="time"></div>
+        <span>Hello <span id="username"></span></span>
+        <div id="greet"></div>
       </div>
     </div>
-    <div>
-      <input type="text" placeholder="Enter text" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="white"
-        onclick="search()"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-        />
-      </svg>
+    <div class="dos">
+      <form onsubmit="search(event)">
+        <input type="text" placeholder="Enter text" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          id="closeIcon"
+          onclick="closeSearch()"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+        <button type="submit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="w-6 h-6"
+            stroke-width="1.5"
+            stroke="white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="tres">
+      <div id="time"></div>
+      <div id="date"></div>
     </div>
   </body>
 </html>
